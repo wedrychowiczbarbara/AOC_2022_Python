@@ -1,7 +1,4 @@
-from decimal import Decimal
-
-
-def day_1_1():
+def part1():
     max=0
     sum=0
     file = open('data/input1.txt', 'r', encoding="utf-8")
@@ -14,10 +11,11 @@ def day_1_1():
             if sum>max:
                 max=sum
             sum=0
-    print ('day1 1:',max)
     file.close()
+    return max
 
-def day_1_2():
+
+def part2():
     max_three=[0, 0, 0]
     suma=0
     file = open('data/input1.txt', 'r', encoding="utf-8")
@@ -32,4 +30,5 @@ def day_1_2():
                 max_three.sort(reverse=True)
                 max_three = max_three[:-1]
             suma=0
-    print ('day1 2:',sum(max_three))
+    file.close()
+    return sum(max_three)
